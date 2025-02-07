@@ -6,7 +6,7 @@ import spam
 import summarize
 import sentiment
 import translator
-import spelling,speech,classification,content
+import spelling,classification,content
 from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title="Multi-App Dashboard", page_icon="🚀", layout="wide")
@@ -61,7 +61,7 @@ with st.sidebar:
     selected_app = option_menu(
         menu_title="Home",
         options=["📊Data Extraction", "🤖Chatbot", "💬Single file chatbot","📩⚠Spam Classifier","📝Text summarizer","🧠Sentiment Analysis","🌍Language Translator",
-                 "✍️Spelling Correction","🗣️Speech Recognition","🏷️Text Classification","📝Content Creator"],
+                 "✍️Spelling Correction","🏷️Text Classification","📝Content Creator"],
 
         icons = ["ABC","ABC","ABC","ABC","ABC","ABC","ABC","ABC","ABC","ABC","ABC"],
 
@@ -99,10 +99,6 @@ elif selected_app == "🌍Language Translator":
 
 elif selected_app=="✍️Spelling Correction":
     spelling.run()
-
-elif selected_app=="🗣️Speech Recognition":
-    speech.run()
-
 elif selected_app=="🏷️Text Classification":
     classification.run()
 elif selected_app=="📝Content Creator":
